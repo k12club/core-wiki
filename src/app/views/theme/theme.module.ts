@@ -14,7 +14,6 @@ import { WikiComponent } from './wiki.component';
     ThemeRoutingModule
   ],
   declarations: [
-    WikiComponent,
     TypographyComponent
   ]
 })

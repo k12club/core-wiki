@@ -54,9 +54,12 @@ import { AdvancedFormsRoutingModule } from './views/forms/advanced-forms/advance
 import { TimepickerModule, BsDatepickerModule } from '../../node_modules/ngx-bootstrap';
 import { SelectModule } from '../../node_modules/ng-select';
 import { FormComponent } from './view/form/form.component';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { DataTableComponent } from './views/tables/datatable/datatable.component';
-import { TablesComponent } from './views/base/tables.component';
+import { CoreUIIconsComponent } from './views/icons/coreui-icons.component';
+import { FlagsComponent } from './views/icons/flags.component';
+import { SimpleLineIconsComponent } from './views/icons/simple-line-icons.component';
+import { FontAwesomeComponent } from './views/icons/font-awesome.component';
+import { ButtonsComponent } from './views/buttons/buttons.component';
+import { TablesComponent } from './views/tables/tables.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -70,12 +73,12 @@ import { TablesComponent } from './views/base/tables.component';
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     FormsModule,
-    AngularFireModule.initializeApp({apiKey: "AIzaSyChaepxxa_e96coIkyQA9P4YEFKUqU3E_M",
-    authDomain: "ethereal-accord-193810.firebaseapp.com",
-    databaseURL: "https://ethereal-accord-193810.firebaseio.com",
-    projectId: "ethereal-accord-193810",
-    storageBucket: "ethereal-accord-193810.appspot.com",
-    messagingSenderId: "344959569062"}),
+    AngularFireModule.initializeApp({apiKey: "AIzaSyDtLwCjf3NtPmZ8MgRpFLdcROupY2W8KKU",
+    authDomain: "palmwiki-1.firebaseapp.com",
+    databaseURL: "https://palmwiki-1.firebaseio.com",
+    projectId: "palmwiki-1",
+    storageBucket: "palmwiki-1.appspot.com",
+    messagingSenderId: "975599706600"}),
     AngularFireDatabaseModule,
     TabsModule.forRoot(),
     ChartsModule,
@@ -89,18 +92,21 @@ import { TablesComponent } from './views/base/tables.component';
   ],
   declarations: [
     AppComponent,
-    ...APP_CONTAINERS,
     P404Component,
     P500Component,
     LoginComponent,
     TablesComponent,
-    DashboardComponent,
+    CoreUIIconsComponent,
     RegisterComponent,
     WikiComponent,
+    FlagsComponent,
+    FontAwesomeComponent,
+    SimpleLineIconsComponent,
     AddWikiComponent,
     DefaultLayoutComponent,
     HomeComponent,
-    FormComponent
+    FormComponent,
+    ButtonsComponent
   ],
   providers: [{
     provide: LocationStrategy,

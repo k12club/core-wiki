@@ -23,6 +23,9 @@ export class HomeComponent implements OnInit {
   }
   delWiki(data){
     this.wikiList.remove(data.key)
+    console.log(data);
+    
+    
     
   }
   editWiki(data){

@@ -22,7 +22,6 @@ import { ButtonsRoutingModule } from './buttons-routing.module';
     FormsModule
   ],
   declarations: [
-    ButtonsComponent,
     DropdownsComponent,
     BrandButtonsComponent
   ]

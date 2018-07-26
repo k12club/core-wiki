@@ -10,10 +10,7 @@ import { IconsRoutingModule } from './icons-routing.module';
 @NgModule({
   imports: [ IconsRoutingModule ],
   declarations: [
-    CoreUIIconsComponent,
-    FlagsComponent,
-    FontAwesomeComponent,
-    SimpleLineIconsComponent
+    
   ]
 })
 export class IconsModule { }
