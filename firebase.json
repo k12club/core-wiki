@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/core-wiki",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
