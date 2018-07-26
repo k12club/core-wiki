@@ -15,6 +15,7 @@
     <a href="https://coreui.io/pro/angular/" class="badge badge-danger ml-2">CoreUI Pro Component</a>
   </div>
   <form (ngSubmit)="addWiki(wikiForm)" #wikiForm="ngForm" class="card-body">
+    
     <fieldset class="form-group">
         <label>Name</label>
       <div class="input-group">
@@ -23,9 +24,8 @@
             <i class="fa fa-calendar"></i>
           </span>
         </span>
-        <input type="text" class="form-control" [textMask]="{mask: dateMask}" ngModel [(ngModel)]="wiki.name">
+        <input name="name" type="text" class="form-control" ngModel [(ngModel)]="wiki.name">
       </div>
-      <!-- <small class="text-muted">ex. 99/99/9999</small> -->
     </fieldset>
     <fieldset class="form-group">
       <label>Description</label>
@@ -35,59 +35,10 @@
             <i class="fa fa-phone"></i>
           </span>
         </span>
-
-        <input name="description" type="text" class="form-control" [textMask]="{mask: phoneMask}" ngModel [(ngModel)]="wiki.description">
+        <input name="description" type="text" class="form-control" ngModel [(ngModel)]="wiki.description">
       </div>
-      <small class="text-muted">ex. (999) 999-9999</small>
     </fieldset>
-    <fieldset class="form-group">
-      <label>Taxpayer Identification Numbers</label>
-      <div class="input-group">
-        <span class="input-group-prepend">
-          <span class="input-group-text">
-            <i class="fa fa-usd"></i>
-          </span>
-        </span>
-        <input type="text" class="form-control" [textMask]="{mask: taxMask}" [(ngModel)]="taxModel">
-      </div>
-      <small class="text-muted">ex. 99-9999999</small>
-    </fieldset>
-    <fieldset class="form-group">
-      <label>Social Security Number</label>
-      <div class="input-group">
-        <span class="input-group-prepend">
-          <span class="input-group-text">
-            <i class="fa fa-male"></i>
-          </span>
-        </span>
-        <input type="text" class="form-control" [textMask]="{mask: ssnMask}" [(ngModel)]="ssnModel">
-      </div>
-      <small class="text-muted">ex. 999-99-9999</small>
-    </fieldset>
-    <fieldset class="form-group">
-      <label>Eye Script</label>
-      <div class="input-group">
-        <span class="input-group-prepend">
-          <span class="input-group-text">
-            <i class="fa fa-asterisk"></i>
-          </span>
-        </span>
-        <input type="text" class="form-control" [textMask]="{mask: eyeScriptMask}" [(ngModel)]="eyeScriptModel">
-      </div>
-      <small class="text-muted">ex. ~9.99 ~9.99 999</small>
-    </fieldset>
-    <fieldset class="form-group">
-      <label>Credit Card Number</label>
-      <div class="input-group">
-        <span class="input-group-prepend">
-          <span class="input-group-text">
-            <i class="fa fa-credit-card"></i>
-          </span>
-        </span>
-        <input type="text" class="form-control" [textMask]="{mask: ccnMask}" [(ngModel)]="ccnModel">
-      </div>
-      <small class="text-muted">ex. 9999 9999 9999 9999</small>
-    </fieldset>
+    
     <button type="submit">Submit</button>
 
   </form>

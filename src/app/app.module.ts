@@ -54,6 +54,9 @@ import { AdvancedFormsRoutingModule } from './views/forms/advanced-forms/advance
 import { TimepickerModule, BsDatepickerModule } from '../../node_modules/ngx-bootstrap';
 import { SelectModule } from '../../node_modules/ng-select';
 import { FormComponent } from './view/form/form.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { DataTableComponent } from './views/tables/datatable/datatable.component';
+import { TablesComponent } from './views/base/tables.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -90,9 +93,12 @@ import { FormComponent } from './view/form/form.component';
     P404Component,
     P500Component,
     LoginComponent,
+    TablesComponent,
+    DashboardComponent,
     RegisterComponent,
     WikiComponent,
     AddWikiComponent,
+    DefaultLayoutComponent,
     HomeComponent,
     FormComponent
   ],

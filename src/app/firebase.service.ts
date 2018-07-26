@@ -24,7 +24,7 @@ export class FirebaseService {
     this.wikiList.remove(id);
   }
   addWiki(data) {
-    return this.wikiList.push(data);
+    return this.wikiList.push(data.value);
     }
     
     editWiki(id, data) {
