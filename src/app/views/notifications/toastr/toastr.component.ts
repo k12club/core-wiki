@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { ToasterModule, ToasterService, ToasterConfig }  from 'angular2-toaster/angular2-toaster';
+import { ToasterModule, ToasterService, ToasterConfig }  from 'angular2-toaster';
 
 @Component({
   templateUrl: 'toastr.component.html',

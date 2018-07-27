@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
 
-import 'brace/index';
+import 'brace';
 import 'brace/theme/eclipse';
 import 'brace/theme/monokai';
 import 'brace/mode/markdown';

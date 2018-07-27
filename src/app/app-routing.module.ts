@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '../../node_modules/@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AddWikiComponent } from './view/add-wiki/add-wiki.component';
 import { HomeComponent } from './view/home/home.component';
 import { FormComponent } from './view/form/form.component';
@@ -11,6 +11,7 @@ import { FontAwesomeComponent } from './views/icons/font-awesome.component';
 import { SimpleLineIconsComponent } from './views/icons/simple-line-icons.component';
 import { ButtonsComponent } from './views/buttons/buttons.component';
 import { TablesComponent } from './views/tables/tables.component';
+import { FileUploadComponent } from './view/file-upload/file-upload.component';
 // Import Containers
 
 
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'fontAwesomeIcon', component: FontAwesomeComponent},
   {path: 'simplelineIcons', component: SimpleLineIconsComponent},
   {path: 'buttons', component: ButtonsComponent},
+  {path: 'upload', component: FileUploadComponent},
 
 
 

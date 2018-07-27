@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Router } from '@angular/router';
+import { AngularFireStorage } from '../../../../node_modules/angularfire2/storage';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   wikiList: AngularFireList<any>;
   wikis: any[];
-  constructor(db: AngularFireDatabase,private router:Router) { 
+  constructor(db: AngularFireDatabase,private router:Router,private storage:AngularFireStorage) { 
     this.wikiList = db.list('wikis');
   }
 
@@ -20,6 +21,8 @@ export class HomeComponent implements OnInit {
     }).subscribe(items => {
     this.wikis = items;
     });
+
+    
   }
   delWiki(data){
     this.wikiList.remove(data.key)

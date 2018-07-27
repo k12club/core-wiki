@@ -48,11 +48,11 @@ import { FormsModule} from '@angular/forms';
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FirebaseService } from './firebase.service';
-import { RouterModule } from '../../node_modules/@angular/router';
-import { TextMaskModule } from '../../node_modules/angular2-text-mask';
+import { RouterModule } from '@angular/router';
+import { TextMaskModule } from 'angular2-text-mask';
 import { AdvancedFormsRoutingModule } from './views/forms/advanced-forms/advanced-forms-routing.module';
-import { TimepickerModule, BsDatepickerModule } from '../../node_modules/ngx-bootstrap';
-import { SelectModule } from '../../node_modules/ng-select';
+import { TimepickerModule, BsDatepickerModule } from 'ngx-bootstrap';
+import { SelectModule } from 'ng-select';
 import { FormComponent } from './view/form/form.component';
 import { CoreUIIconsComponent } from './views/icons/coreui-icons.component';
 import { FlagsComponent } from './views/icons/flags.component';
@@ -60,6 +60,12 @@ import { SimpleLineIconsComponent } from './views/icons/simple-line-icons.compon
 import { FontAwesomeComponent } from './views/icons/font-awesome.component';
 import { ButtonsComponent } from './views/buttons/buttons.component';
 import { TablesComponent } from './views/tables/tables.component';
+import { FileUploadComponent } from './view/file-upload/file-upload.component';
+import { AngularFirestoreModule } from '../../node_modules/angularfire2/firestore';
+import { AngularFireStorageModule ,AngularFireUploadTask} from '../../node_modules/angularfire2/storage';
+import { DropZoneDirective } from './view/drop-zone.directive';
+import { FileSizePipe } from './view/file-size.pipe';
+import { FirebaseConfig } from '../environments/firebaseconfig';
 @NgModule({
   imports: [
     BrowserModule,
@@ -73,7 +79,7 @@ import { TablesComponent } from './views/tables/tables.component';
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     FormsModule,
-    AngularFireModule.initializeApp({}),
+    AngularFireModule.initializeApp(FirebaseConfig.firebaseConfig),
     AngularFireDatabaseModule,
     TabsModule.forRoot(),
     ChartsModule,
@@ -81,6 +87,10 @@ import { TablesComponent } from './views/tables/tables.component';
     TextMaskModule,
     TimepickerModule.forRoot(),
     BsDatepickerModule.forRoot(),
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    
+
 
     SelectModule
     
@@ -101,7 +111,11 @@ import { TablesComponent } from './views/tables/tables.component';
     DefaultLayoutComponent,
     HomeComponent,
     FormComponent,
-    ButtonsComponent
+    DropZoneDirective,
+    FileSizePipe,
+    ButtonsComponent,
+    FileUploadComponent,
+    
   ],
   providers: [{
     provide: LocationStrategy,

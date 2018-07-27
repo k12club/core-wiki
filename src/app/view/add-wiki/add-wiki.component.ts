@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '../../../../node_modules/@angular/router';
-import { NgForm } from '../../../../node_modules/@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 import { FirebaseService } from '../../firebase.service';
-import { AngularFireDatabase } from '../../../../node_modules/angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
   selector: 'app-add-wiki',
